@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>tienda_zapatos</title>
+    <link rel="icon" type="image/png" sizes="475x475" href="{% static 'assets/img/logo tienda de zapatos.png' %}">
+    <link rel="icon" type="image/png" sizes="475x475" href="{% static 'assets/img/logo tienda de zapatos.png' %}">
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="manifest" href="{% static 'manifest.json' %}" crossorigin="use-credentials">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Akshar&amp;display=swap">
+    <link rel="stylesheet" href="{% static 'assets/css/Login-Form-Basic-icons.css' %}">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-md py-3" id="navegador" style="background: #fcede4;color: var(--bs-body-bg);border-style: none;">
+            <div class="container"><a class="navbar-brand d-flex align-items-center" href="/dashboard"><img class="img-fluid" src="{% static 'assets/img/logo tienda de zapatos.png' %}" style="width: 60px;"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse d-lg-flex justify-content-lg-center align-items-lg-center" id="navcol-3" style="width: auto;height: auto;text-align: center;">
+                    <ul class="navbar-nav text-center d-lg-flex mx-auto justify-content-lg-center align-items-lg-center" style="padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
+                        <li class="nav-item"><a class="nav-link active" href="/registro_ventas_1" style="width: auto;height: auto;margin-left: 25px;margin-right: 25px;text-align: center;">Vender</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/reporte_ventas" style="margin-right: 25px;margin-left: 25px;text-align: center;">Reportes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/comisiones" style="margin-right: 25px;margin-left: 25px;text-align: center;">Comisiones</a></li>
+                    </ul>
+                    <form method="post">
+                        {% csrf_token %} 
+                        <button class="btn btn-primary" name="logout" type="submit" style="text-align: center;font-size: 20px;background: #19201E;border-style: none;margin-top: auto;">Cerrar sesión&nbsp;</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="d-lg-flex justify-content-lg-center align-items-lg-center">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center" style="margin-top: 50px;font-size: 25px;">¡Hola!</h1>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col">
+                    <h1 class="text-center d-lg-flex justify-content-lg-center align-items-lg-center" style="font-size: 25px;margin-top: 20px;"><a class="btn btn-primary d-lg-flex justify-content-lg-center align-items-lg-center" role="button" style="text-align: center;font-size: 20px;background: #fcede4;margin-top: auto;width: 250px;color: rgb(0,0,0);font-weight: bold;border-color: rgb(193,193,193);height: 80px;" href="/registro_ventas_1">Realizar venta</a></h1>
+                    <h1 class="text-center d-lg-flex justify-content-lg-center align-items-lg-center" style="font-size: 25px;margin-top: 20px;"><a class="btn btn-primary d-lg-flex justify-content-lg-center align-items-lg-center" role="button" style="text-align: center;font-size: 20px;background: #fcede4;margin-top: auto;width: 250px;font-weight: bold;color: rgb(0,0,0);border-color: rgb(193,193,193);height: 80px;" href="/reporte_ventas">Reporte de ventas</a></h1>
+                    <h1 class="text-center d-lg-flex justify-content-lg-center align-items-lg-center" style="font-size: 25px;margin-top: 20px;"><a class="btn btn-primary d-lg-flex justify-content-lg-center align-items-lg-center" role="button" style="text-align: center;font-size: 20px;background: #fcede4;margin-top: auto;width: 250px;font-weight: bold;color: rgb(0,0,0);border-color: rgb(193,193,193);height: 80px;" href="/comisiones">Reporte de comisiones</a></h1>
+                    <h1 class="text-center d-lg-flex justify-content-lg-center align-items-lg-center" style="font-size: 25px;margin-top: 20px;"><a class="btn btn-primary d-lg-flex justify-content-lg-center align-items-lg-center" role="button" style="text-align: center;font-size: 20px;background: #fcede4;margin-top: auto;width: 250px;color: rgb(0,0,0);font-weight: bold;border-color: rgb(193,193,193);height: 80px;" href="/agregar_inventario">Agregar / Actualizar inventario</a></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-right: 0;margin-left: 0;">
+        <div class="col">
+            <div></div>
+        </div>
+    </div>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

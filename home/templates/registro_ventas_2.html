@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>tienda_zapatos</title>
+    <link rel="icon" type="image/png" sizes="475x475" href="{% static 'assets/img/logo tienda de zapatos.png' %}">
+    <link rel="icon" type="image/png" sizes="475x475" href="{% static 'assets/img/logo%20tienda%20de%20zapatos.png' %}">
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="manifest" href="{static % 'manifest.json' %}" crossorigin="use-credentials">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Akshar&amp;display=swap">
+    <link rel="stylesheet" href="{% static 'assets/css/Login-Form-Basic-icons.css' %}">
+</head>
+
+<body>
+    <form method="post" action="/registrar_venta">
+    {% csrf_token %}
+    <div>
+        <nav class="navbar navbar-expand-md py-3" id="navegador-1" style="background: #fcede4;color: var(--bs-body-bg);border-style: none;">
+            <div class="container"><a class="navbar-brand d-flex align-items-center" href="/dashboard"><img class="img-fluid" src="{% static 'assets/img/logo%20tienda%20de%20zapatos.png' %}" style="width: 60px;"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse d-lg-flex justify-content-lg-center align-items-lg-center" id="navcol-1" style="width: auto;height: auto;text-align: center;">
+                    <ul class="navbar-nav text-center d-lg-flex mx-auto justify-content-lg-center align-items-lg-center" style="padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
+                        <li class="nav-item"><a class="nav-link active" href="/registro_ventas_1" style="width: auto;height: auto;margin-left: 25px;margin-right: 25px;text-align: center;">Vender</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/reporte_ventas" style="margin-right: 25px;margin-left: 25px;text-align: center;">Reportes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/comisiones" style="margin-right: 25px;margin-left: 25px;text-align: center;">Comisiones</a></li>
+                    </ul><button class="btn btn-primary" type="submit" style="text-align: center;font-size: 20px;background: #19201E;border-style: none;margin-top: auto;">Cerrar sesión&nbsp;</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="d-lg-flex justify-content-lg-center align-items-lg-center">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center" style="margin-top: 50px;font-size: 25px;">Registro de Ventas</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-right: 0;margin-left: 0;">
+        <div class="col">
+            <div style="margin-top: 40px;">
+                <div class="container d-flex justify-content-center">
+                        <div class="row d-flex d-lg-flex justify-content-center justify-content-lg-center" style="width: auto;max-width: 100%;">
+                            <div class="col-lg-5" style="border-style: solid;border-color: rgb(143,143,143);border-radius: 25px;margin: 5px;width: auto;">
+                                    <div class="row text-center" style="margin-top: 20px;text-align: center;">
+                                        <div class="col">
+                                            <h1 class="d-lg-flex justify-content-lg-center align-items-lg-center" style="font-size: 20px;">Información cliente</h1>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-top: 20px;">
+                                        <div class="col-lg-1 d-flex d-lg-flex justify-content-center align-items-end justify-content-lg-center align-items-lg-end" style="height: auto;width: 100px;text-align: center;">
+                                            <h1 class="d-lg-flex justify-content-lg-center align-items-lg-center" style="font-size: 20px;">Cliente</h1>
+                                        </div>
+                                        <div class="col d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-start align-items-lg-center" style="width: auto;height: auto;"><input class="d-lg-flex justify-content-lg-center align-items-lg-center" type="search" style="border-radius: 25px;border: 2px solid rgb(143,143,143);text-align: center;width: 100%;" placeholder="Buscar cliente"></div>
+                                    </div>
+                                    <div class="row" style="margin-top: 20px;">
+                                        <div class="col-lg-1 d-flex d-lg-flex justify-content-center align-items-end justify-content-lg-center align-items-lg-end" style="height: auto;width: 100px;text-align: center;">
+                                            <h1 class="d-lg-flex justify-content-lg-center align-items-lg-center" style="font-size: 20px;">Nombre</h1>
+                                        </div>
+                                        <div class="col d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-start align-items-lg-center" style="width: auto;height: auto;"><input class="d-lg-flex justify-content-lg-center align-items-lg-center" type="search" id="nombre" name="nombre" style="border-radius: 25px;border: 2px solid rgb(143,143,143);text-align: center;width: 100%;" placeholder="Nombre de cliente"></div>
+                                    </div>
+                                    <div class="row" style="margin-top: 20px;">
+                                        <div class="col-lg-1 d-flex d-lg-flex justify-content-center align-items-end justify-content-lg-center align-items-lg-end" style="height: auto;width: 100px;text-align: center;">
+                                            <h1 class="d-lg-flex justify-content-lg-center align-items-lg-center" style="font-size: 20px;">ID</h1>
+                                        </div>
+                                        <div class="col d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-start align-items-lg-center" style="width: auto;height: auto;"><input class="d-lg-flex justify-content-lg-center align-items-lg-center" type="search" id="id" name="id" style="border-radius: 25px;border: 2px solid rgb(143,143,143);text-align: center;width: 100%;" placeholder="Identificación cliente"></div>
+                                    </div>
+                                    <div class="row" style="margin-top: 20px;margin-bottom: 20px;">
+                                        <div class="col-lg-1 d-flex d-lg-flex justify-content-center align-items-end justify-content-lg-center align-items-lg-end" style="height: auto;width: 100px;text-align: center;">
+                                            <h1 class="d-lg-flex justify-content-lg-center align-items-lg-center" style="font-size: 20px;">Email</h1>
+                                        </div>
+                                        <div class="col d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-start align-items-lg-center" style="width: auto;height: auto;"><input class="d-lg-flex justify-content-lg-center align-items-lg-center" type="search" id="email" name="email" style="border-radius: 25px;border: 2px solid rgb(143,143,143);text-align: center;width: 100%;" placeholder="Correo electronico"></div>
+                                        
+                                    </div>
+                            </div>
+                            <div class="col-lg-5" style="border-style: solid;border-color: rgb(143,143,143);border-radius: 25px;width: auto;margin: 5px;max-width: 100%;">
+                                <div class="row text-center" style="text-align: center;margin-top: 20px;">
+                                    <div class="col">
+                                        <h1 class="d-lg-flex justify-content-lg-center align-items-lg-center" style="font-size: 20px;">Método de pago</h1>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top: 20px;">
+                                    <div class="col-lg-1 d-flex d-lg-flex justify-content-center align-items-end justify-content-lg-center align-items-lg-end" style="height: auto;width: 100px;text-align: center;">
+                                        <h1 class="d-lg-flex justify-content-lg-center align-items-lg-center" style="font-size: 20px;">Tipo</h1>
+                                    </div>
+                                    <div class="col d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center" style="width: auto;height: auto;">
+                                        <select class="d-lg-flex justify-content-lg-center" style="text-align: center;width: 100%;" id="metodo" name="metodo">
+                                            <option value="efectivo" selected="">Efectivo</option>
+                                            <option value="Tarjeta">Tarjeta</option>
+                                            <option value="Transferencia">Transferencia</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top: 20px;">
+                                    <div class="col-lg-1 d-flex d-lg-flex justify-content-center align-items-end justify-content-lg-center align-items-lg-end" style="height: auto;width: 100px;text-align: center;">
+                                        <h1 class="d-lg-flex justify-content-lg-center align-items-lg-center" style="font-size: 20px;">Monto</h1>
+                                    </div>
+                                    <div class="col text-center d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center" style="width: auto;"><input type="number" id="monto" name="monto" style="width: 100%;"></div>
+                                </div>
+                                <div class="row d-lg-flex justify-content-lg-center" style="margin-top: 20px;">
+                                    <div class="col d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center" style="width: auto;height: auto;"><button class="btn btn-primary" type="button" style="text-align: center;font-size: 16px;background: #19201E;border-style: none;margin-top: auto;">Agregar otro método</button></div>
+                                </div>
+                                <div class="row d-lg-flex justify-content-lg-center" style="margin-top: 20px;">
+                                    <div class="col d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center" style="width: auto;height: auto;margin: 0;margin-bottom: 20px;">
+                                        <h1 class="text-center" style="font-size: 20px;color: rgb(159,14,5);">Recibido $ 120.000 COP</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <h1 class="text-center" style="font-size: 25px;margin-top: 30px;">Total: $ 100.000 COP</h1>
+            <h1 class="text-center" style="font-size: 25px;margin-top: 30px;color: rgb(159,14,5);">Vuelto: $ 20.000 COP</h1>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 20px;margin-right: 0;margin-left: 0;margin-bottom: 50px;">
+        <div class="col d-flex d-lg-flex justify-content-end justify-content-lg-end align-items-lg-center"><a class="btn btn-primary d-lg-flex justify-content-lg-center" role="button" style="font-size: 20px;border-style: none;background: red;" href="/registro_ventas_1">Retroceder</a></div>
+        <div class="col d-flex d-lg-flex justify-content-start justify-content-lg-start align-items-lg-center"><button class="btn btn-primary d-lg-flex justify-content-lg-center" role="button" style="font-size: 20px;border-style: none;background: green;" type="submit">Continuar</button></div>
+    </div>
+    </form>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
