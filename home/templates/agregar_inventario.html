@@ -70,9 +70,36 @@
         </div>
         <div class="row" style="margin-top: 20px;margin-right: 0;margin-left: 0;margin-bottom: 50px;">
             <div class="col d-flex d-lg-flex justify-content-end justify-content-lg-end align-items-lg-center"><button class="btn btn-primary d-lg-flex justify-content-lg-center" style="font-size: 20px;border-style: none;background: red;">Limpiar</button></div>
-            <div class="col d-flex d-lg-flex justify-content-start justify-content-lg-start align-items-lg-center"><button class="btn btn-primary d-lg-flex justify-content-lg-center" type="submit" style="font-size: 20px;border-style: none;background: green;">Continuar</a></div>
+            <div class="col d-flex d-lg-flex justify-content-start justify-content-lg-start align-items-lg-center"><button class="btn btn-primary d-lg-flex justify-content-lg-center" type="submit" style="font-size: 20px;border-style: none;background: green;">Continuar</button></div>
         </div>
     </form>
+    <div class="container d-flex justify-content-center">
+        <div class="row d-flex d-lg-flex justify-content-center justify-content-lg-center" style="width: 100%;">
+            <div class="col" style="border-style: solid;border-color: rgb(143,143,143);border-radius: 25px;width: 100%;">
+                <div class="table-responsive" style="margin-top: 10px;margin-left: 10px;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="text-center">ID</th>
+                                <th class="text-center">Producto</th>
+                                <th class="text-center">Precio</th>
+                                <th class="text-center">Cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">{{ producto.id }}</td>
+                                <td class="text-center">{{ producto.nombre }}</td>
+                                <td class="text-center">{{ producto.precio }}</td>
+                                <td class="text-center">{{ producto.inventario }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
 </body>
 

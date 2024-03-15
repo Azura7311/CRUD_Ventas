@@ -282,6 +282,7 @@ def agregar_inventario(request):
     if not request.user.is_superuser:
         return render(request, 'dashboard.html')
     a = request.POST
+    context = {}
     if a:
         producto = Producto.objects.raw(f'SELECT * FROM home_Producto WHERE id="{a.get("id")}"')
         if len(list(producto)) > 0:
@@ -296,4 +297,5 @@ def agregar_inventario(request):
         else:
             producto = Producto(id=a.get("id"), nombre=a.get("nombre"), precio=a.get("precio"), inventario=int(a.get("cantidad")))
             producto.save()
-    return render(request, 'agregar_inventario.html')
+        context['producto'] = producto
+    return render(request, 'agregar_inventario.html', context)
